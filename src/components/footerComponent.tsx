@@ -1,12 +1,12 @@
-export default function footerComp() {
-    return(
+export default function FooterComp() {
+  return (
     <div className="footer-wrap">
-    <footer className="footer">
+      <footer className="footer">
         <a href="#">
-            <img src="img/logo.png" alt='' className="footer-logo"></img>
+          <img src="./public/logo.png" alt="" className="footer-logo" />
         </a>
         <p>Copyright © 2021 - Tajem Creative</p>
-</footer>
-</div>
-)
+      </footer>
+    </div>
+  );
 }

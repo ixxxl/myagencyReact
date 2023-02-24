@@ -2,15 +2,15 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/headerComponent";
-import footerComp from "./components/footerComponent";
-import mainComponent from "./components/mainComponent";
+import FooterComp from "./components/footerComponent";
+import MainComponent from ".//components/mainComponent";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <mainComponent />
-      <footerComp />
+      <MainComponent />
+      <FooterComp />
     </div>
   );
 }
