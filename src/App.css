@@ -55,7 +55,7 @@ h4 {
 }
 
 .header-wrap {
-  background: #402d70 url(../src/img/tajem_header75.jpg);
+  background: #402d70 url(../public/tajem_header75.jpg);
   background-size: cover;
 }
 
@@ -188,7 +188,7 @@ h4 {
 }
 
 .footer-wrap {
-  background: #332954 url(../src/img/footer.png);
+  background: #332954 url(../public/footer.png);
   background-size: cover;
 }
 

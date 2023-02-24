@@ -5,7 +5,7 @@ export default function Header() {
         <div className="header-top">
           <a href="#">
             <img
-              src="../public/logo.png"
+              src="./logo.png"
               alt="Tajam - креативное агентсво"
               className="logo"
             ></img>

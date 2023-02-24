@@ -2,7 +2,7 @@ export default function MainComponent() {
   return (
     <main className="content">
       <article className="history">
-        <img src="../public/tajem_2.png" className="imgleft" alt=""></img>
+        <img src="../tajem_2.png" className="imgleft" alt=""></img>
         <div className="history-text">
           <h2>НАША ИСТОРИЯ </h2>
           <p>
