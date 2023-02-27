@@ -1,8 +1,12 @@
-import { useGlobalContext } from "./mapHelpers";
-
+import { useState } from "react";
+import { ELanguages, useGlobalContext } from "./mapHelpers";
 
 export default function Header() {
   const { lang, setLang } = useGlobalContext();
+  const [active, setActive] = useState<boolean>(false);
+  const setButton = () => {
+    setActive(true);
+    };
 
   return (
     <div className="header-wrap">
@@ -32,10 +36,20 @@ export default function Header() {
               <a href="#">КОНТАКТЫ</a>"
             </li>
           </ul>
-          <div>
-            <button onClick={() => setLang("RO")}>RO</button>
-            <button onClick={() => setLang("RU")}>RU</button>
-          </div> 
+          <div className="menu">
+            <button className="menu"
+              onClick={() => setLang(ELanguages.ro) }
+              style={{ backgroundColor: lang ===ELanguages.ro ? "yellow" : "white" }}
+            >
+              RO
+            </button>
+            <button
+              onClick={() => setLang(ELanguages.ru)}
+              style={{ backgroundColor: lang===ELanguages.ru ? "yellow" : "white" }}
+            >
+              RU
+            </button>
+          </div>
         </div>
         <div className="header-main">
           <h1>Tajam - креативное агентсво</h1>
