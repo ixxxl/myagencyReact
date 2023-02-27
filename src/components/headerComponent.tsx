@@ -1,4 +1,9 @@
+import { useGlobalContext } from "./mapHelpers";
+
+
 export default function Header() {
+  const { lang, setLang } = useGlobalContext();
+
   return (
     <div className="header-wrap">
       <header className="header">
@@ -27,6 +32,10 @@ export default function Header() {
               <a href="#">КОНТАКТЫ</a>"
             </li>
           </ul>
+          <div>
+            <button onClick={() => setLang("RO")}>RO</button>
+            <button onClick={() => setLang("RU")}>RU</button>
+          </div> 
         </div>
         <div className="header-main">
           <h1>Tajam - креативное агентсво</h1>

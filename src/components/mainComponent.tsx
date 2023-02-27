@@ -1,10 +1,16 @@
+import { useGlobalContext } from "./mapHelpers";
+
+
 export default function MainComponent() {
+  const { lang } = useGlobalContext();
+
   return (
     <main className="content">
       <article className="history">
         <img src="../tajem_2.png" className="imgleft" alt=""></img>
         <div className="history-text">
-          <h2>НАША ИСТОРИЯ </h2>
+          <h2>{lang === "RU" ? "НАША ИСТОРИЯ" : "Istorie noastra"} </h2>
+
           <p>
             Разрабатываем коммуникационные стратегии, которые позволяют бизнесу
             устойчиво развиваться. Разрабатываем нестандартные решения для
