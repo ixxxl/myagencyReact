@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { ELanguages, useGlobalContext } from "./mapHelpers";
+import {  useGlobalContext } from "./mapHelpers";
+import { ELanguages } from "./models/lang";
 
 export default function Header() {
   const { lang, setLang } = useGlobalContext();
-  const [active, setActive] = useState<boolean>(false);
-  const setButton = () => {
-    setActive(true);
-    };
 
   return (
     <div className="header-wrap">
@@ -36,22 +33,26 @@ export default function Header() {
               <a href="#">КОНТАКТЫ</a>"
             </li>
           </ul>
-          <div className="menu">
-            <button className="menu"
-              onClick={() => setLang(ELanguages.ro) }
-              style={{ backgroundColor: lang ===ELanguages.ro ? "yellow" : "white" }}
+          <div className="lang-buttons">
+            <button
+              onClick={() => setLang(ELanguages.ro)}
+              style={{
+                backgroundColor: lang === ELanguages.ro ? "yellow" : "white",
+              }}
             >
               RO
             </button>
             <button
               onClick={() => setLang(ELanguages.ru)}
-              style={{ backgroundColor: lang===ELanguages.ru ? "yellow" : "white" }}
+              style={{
+                backgroundColor: lang === ELanguages.ru ? "yellow" : "white",
+              }}
             >
               RU
             </button>
           </div>
         </div>
-        <div className="header-main">
+           <div className="header-main">
           <h1>Tajam - креативное агентсво</h1>
           <h2>
             Полное погружение в проект и подбор оптимального набора услуг и
