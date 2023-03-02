@@ -1,4 +1,5 @@
 import { useGlobalContext } from "./mapHelpers";
+import { ELanguages } from "./models/lang";
 
 
 export default function MainComponent() {
@@ -9,7 +10,7 @@ export default function MainComponent() {
       <article className="history">
         <img src="../tajem_2.png" className="imgleft" alt=""></img>
         <div className="history-text">
-          <h2>{lang === "RU" ? "НАША ИСТОРИЯ" : "Istorie noastra"} </h2>
+          <h2>{lang === ELanguages.ru ? "НАША ИСТОРИЯ" : "Istorie noastra"} </h2>
 
           <p>
             Разрабатываем коммуникационные стратегии, которые позволяют бизнесу

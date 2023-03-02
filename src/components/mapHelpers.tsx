@@ -2,12 +2,9 @@ import { createContext, useContext } from "react";
 
 export type GlobalContent = {
   lang: string;
-  setLang: (c: string) => void;
+  setLang: (l: string) => void;
 };
-export enum ELanguages {
-  ro = "RO",
-  ru = "RU",
-}
+
 export const MyGlobalContext = createContext<GlobalContent>({
   lang: "", // set a default value
   setLang: () => {},
