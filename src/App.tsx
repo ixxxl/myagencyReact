@@ -8,6 +8,9 @@ import MainComponent from ".//components/mainComponent";
 import { MyGlobalContext } from "./components/mapHelpers";
 import { Route, Routes } from "react-router-dom";
 import { Form1Component } from "./components/Form1Component";
+import { Form2Component } from "./components/Form2Component";
+import { MainPage } from "./pages/mainPage";
+import SinglePage from "./pages/singlePage";
 
 function App() {
   const [lang, setLang] = useState<string>("RU");
@@ -15,29 +18,16 @@ function App() {
   return (
     <MyGlobalContext.Provider value={{ lang, setLang }}>
       <div className="App">
-        {/* <ul className="menu">
-            <li>
-              <a href="#">ГЛАВНАЯ</a>"
-            </li>
-            <li>
-              <a href="./about">О НАС</a>"
-            </li>
-            <li>
-              <a href="#">КОМАНДА</a>"
-            </li>
-            <li>
-              <a href="#">РАБОТЫ</a>"
-            </li>
-            <li>
-              <a href="#">КОНТАКТЫ</a>"
-            </li>
-          </ul> */}
         {/* <Header />
         <MainComponent />
         <FooterComp /> */}
         <Routes>
-          {/* <Route path="/" element={<Header />} /> */}
-          <Route path="./about" element={<Form1Component />} />
+          <Route path="/" element={<MainPage />}>
+            {/* <Route index element={<MainPage />} /> */}
+            <Route path="/about" element={<Form1Component />} />
+            <Route path="/contacts" element={<Form2Component />} />
+            {/* <Route path="/about:id" element={<SinglePage  />} /> */}
+          </Route>
         </Routes>
       </div>
     </MyGlobalContext.Provider>
