@@ -1,6 +1,6 @@
+import { Outlet } from "react-router-dom";
 import { useGlobalContext } from "./mapHelpers";
 import { ELanguages } from "./models/lang";
-
 
 export default function MainComponent() {
   const { lang } = useGlobalContext();
@@ -10,9 +10,11 @@ export default function MainComponent() {
       <article className="history">
         <img src="../tajem_2.png" className="imgleft" alt=""></img>
         <div className="history-text">
-          <h2>{lang === ELanguages.ru ? "НАША ИСТОРИЯ" : "Istorie noastra"} </h2>
-
-          <p>
+          <h2>
+            {lang === ELanguages.ru ? "НАША ИСТОРИЯ" : "Istorie noastra"}{" "}
+          </h2>
+          <Outlet />
+          {/* <p>
             Разрабатываем коммуникационные стратегии, которые позволяют бизнесу
             устойчиво развиваться. Разрабатываем нестандартные решения для
             бизнеса, которые обязательно решают клиентскую задачу.
@@ -26,10 +28,11 @@ export default function MainComponent() {
             <a href="#" className="linkButton">
               Подробнее
             </a>
-          </p>
+          </p> */}
         </div>
       </article>
-      <div className="form">
+
+      {/* <div className="form">
         <h2>НАПИШИТЕ НАМ</h2>
         <div className="form-block">
           <form method="GET">
@@ -60,7 +63,7 @@ export default function MainComponent() {
             <button className="button">отправить</button>
           </form>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }

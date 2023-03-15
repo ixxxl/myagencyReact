@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { useGlobalContext } from "./mapHelpers";
 import { ELanguages } from "./models/lang";
+import "../App.css";
+import CustomLinkComponent from "./CustomLinkComponent";
 
 export default function Header() {
   const { lang, setLang } = useGlobalContext();
@@ -21,7 +24,13 @@ export default function Header() {
               <a href="#">ГЛАВНАЯ</a>"
             </li>
             <li>
-              <a href="./about">О НАС</a>"
+              {/* <CustomLinkComponent to="/about">О НАС</CustomLinkComponent> */}
+              <NavLink
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+                to="/about"
+              >
+                О НАС
+              </NavLink>
             </li>
             <li>
               <a href="#">КОМАНДА</a>"
@@ -30,9 +39,10 @@ export default function Header() {
               <a href="#">РАБОТЫ</a>"
             </li>
             <li>
-              <a href="#">КОНТАКТЫ</a>"
+              <NavLink to="/contacts">КОНТАКТЫ</NavLink>"
             </li>
           </ul>
+          {/* <Outlet /> */}
           <div className="lang-buttons">
             <button
               onClick={() => setLang(ELanguages.ro)}

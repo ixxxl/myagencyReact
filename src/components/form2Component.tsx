@@ -5,16 +5,16 @@ export const Form2Component = () => {
       <div className="form-block">
         <form method="GET">
           <input
-            type="email"
-            className="imput_txt"
-            name="email"
-            placeholder="Email"
-          />
-          <input
             type="text"
             className="imput_txt"
             name="subject"
             placeholder="Тема"
+          />
+          <input
+            type="email"
+            className="imput_txt"
+            name="email"
+            placeholder="Email"
           />
           <button className="button">отправить</button>
         </form>
