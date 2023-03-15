@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  useGlobalContext } from "./mapHelpers";
+import { useGlobalContext } from "./mapHelpers";
 import { ELanguages } from "./models/lang";
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
               <a href="#">ГЛАВНАЯ</a>"
             </li>
             <li>
-              <a href="#">О НАС</a>"
+              <a href="./about">О НАС</a>"
             </li>
             <li>
               <a href="#">КОМАНДА</a>"
@@ -52,7 +52,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-           <div className="header-main">
+        <div className="header-main">
           <h1>Tajam - креативное агентсво</h1>
           <h2>
             Полное погружение в проект и подбор оптимального набора услуг и

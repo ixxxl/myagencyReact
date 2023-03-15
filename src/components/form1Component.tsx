@@ -1,4 +1,4 @@
-export default function form1Component() {
+export const Form1Component = () => {
   return (
     <div className="form">
       <h2>НАПИШИТЕ НАМ</h2>
@@ -15,4 +15,4 @@ export default function form1Component() {
       </div>
     </div>
   );
-}
+};

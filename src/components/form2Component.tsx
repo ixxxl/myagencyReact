@@ -1,4 +1,4 @@
-export default function form2Component() {
+export const Form2Component = () => {
   return (
     <div className="form">
       <h2>НАПИШИТЕ НАМ</h2>
@@ -21,4 +21,4 @@ export default function form2Component() {
       </div>
     </div>
   );
-}
+};
