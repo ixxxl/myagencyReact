@@ -43,7 +43,6 @@
   padding: 0;
   margin: 0;
 }
-
 body {
   color: #413d4b;
   font-family: "Roboto", sans-serif;
@@ -55,6 +54,9 @@ h3,
 h4 {
   font-weight: 500;
 }
+
+/* 
+
 
 .header-wrap {
   background: #402d70 url(../public/tajem_header75.jpg);
@@ -225,4 +227,4 @@ h4 {
 .active-link{
   color: red;
   cursor: default;
-}
+} */

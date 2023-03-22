@@ -1,7 +1,9 @@
+import { Button, Form, FormH2 } from "./StyleComponent";
+
 export const Form1Component = () => {
   return (
-    <div className="form">
-      <h2>О НАС</h2>
+    <Form>
+      <FormH2>О НАС</FormH2>
       <div className="form-block">
         <form method="GET">
           <p>
@@ -15,9 +17,9 @@ export const Form1Component = () => {
             приносит прибыль и не требует ежедневного контроля
           </p>
 
-          <button className="button">отправить</button>
+          <Button>отправить</Button>
         </form>
       </div>
-    </div>
+    </Form>
   );
 };

@@ -4,46 +4,52 @@ import { useGlobalContext } from "./mapHelpers";
 import { ELanguages } from "./models/lang";
 import "../App.css";
 import CustomLinkComponent from "./CustomLinkComponent";
+import {
+  ActiveLink,
+  HeadeR,
+  HeaderMain,
+  HeaderMainH1,
+  HeaderMainH2,
+  HeaderTop,
+  HeaderWrap,
+  LangButtons,
+  LinkButton,
+  Logo,
+  Menu,
+  MenuLi,
+  MenuLiA,
+} from "./StyleComponent";
 
 export default function Header() {
   const { lang, setLang } = useGlobalContext();
 
   return (
-    <div className="header-wrap">
-      <header className="header">
-        <div className="header-top">
-          <a href="#">
-            <img
-              src="./logo.png"
-              alt="Tajam - креативное агентсво"
-              className="logo"
-            ></img>
-          </a>
-          <ul className="menu">
-            <li>
-              <a href="#">ГЛАВНАЯ</a>"
-            </li>
-            <li>
+    <HeaderWrap>
+      <HeadeR>
+        <HeaderTop>
+          <MenuLiA href="#">
+            <Logo src="./logo.png" alt="Tajam - креативное агентсво"></Logo>
+          </MenuLiA>
+          <Menu>
+            <MenuLi>
+              <MenuLiA href="#">ГЛАВНАЯ</MenuLiA>"
+            </MenuLi>
+            <MenuLi>
               {/* <CustomLinkComponent to="/about">О НАС</CustomLinkComponent> */}
-              <NavLink
-                className={({ isActive }) => (isActive ? "active-link" : "")}
-                to="/about"
-              >
-                О НАС
-              </NavLink>
-            </li>
-            <li>
-              <a href="#">КОМАНДА</a>"
-            </li>
-            <li>
-              <a href="#">РАБОТЫ</a>"
-            </li>
-            <li>
-              <NavLink to="/contacts">КОНТАКТЫ</NavLink>"
-            </li>
-          </ul>
+              <ActiveLink to="/about">О НАС</ActiveLink>
+            </MenuLi>
+            <MenuLi>
+              <MenuLiA href="#">КОМАНДА</MenuLiA>"
+            </MenuLi>
+            <MenuLi>
+              <MenuLiA href="#">РАБОТЫ</MenuLiA>"
+            </MenuLi>
+            <MenuLi>
+              <ActiveLink to="/contacts">КОНТАКТЫ</ActiveLink>"
+            </MenuLi>
+          </Menu>
           {/* <Outlet /> */}
-          <div className="lang-buttons">
+          <LangButtons>
             <button
               onClick={() => setLang(ELanguages.ro)}
               style={{
@@ -60,24 +66,22 @@ export default function Header() {
             >
               RU
             </button>
-          </div>
-        </div>
-        <div className="header-main">
-          <h1>Tajam - креативное агентсво</h1>
-          <h2>
+          </LangButtons>
+        </HeaderTop>
+        <HeaderMain>
+          <HeaderMainH1>Tajam - креативное агентсво</HeaderMainH1>
+          <HeaderMainH2>
             Полное погружение в проект и подбор оптимального набора услуг и
             инструментов индивидуально для вас. Разработаем удобный для
             пользователя сайт, который решит задачи бизнеса и принесет прибыль.
             Разрабатываем маркетинговые стратегии, которые позволяют бизнесу
             устойчиво развиваться.
-          </h2>
+          </HeaderMainH2>
           <p>
-            <a href="#" className="linkButton">
-              Подробнее
-            </a>
+            <LinkButton>Подробнее</LinkButton>
           </p>
-        </div>
-      </header>
-    </div>
+        </HeaderMain>
+      </HeadeR>
+    </HeaderWrap>
   );
 }

@@ -1,12 +1,14 @@
+import { Footer, FooterImg, FooterP, FooterWrap } from "./StyleComponent";
+
 export default function FooterComp() {
   return (
-    <div className="footer-wrap">
-      <footer className="footer">
+    <FooterWrap>
+      <Footer>
         <a href="#">
-          <img src="./logo.png" alt="" className="footer-logo" />
+          <FooterImg src="./logo.png" alt=""  />
         </a>
-        <p>Copyright © 2021 - Tajem Creative</p>
-      </footer>
-    </div>
+        <FooterP>Copyright © 2021 - Tajem Creative</FooterP>
+      </Footer>
+    </FooterWrap>
   );
 }

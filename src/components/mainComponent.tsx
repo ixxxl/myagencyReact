@@ -1,18 +1,19 @@
 import { Outlet } from "react-router-dom";
 import { useGlobalContext } from "./mapHelpers";
 import { ELanguages } from "./models/lang";
+import { Content, HistoryArticle, HistoryTextH2, HistoryTextP, ImgLeft } from "./StyleComponent";
 
 export default function MainComponent() {
   const { lang } = useGlobalContext();
 
   return (
-    <main className="content">
-      <article className="history">
-        <img src="../tajem_2.png" className="imgleft" alt=""></img>
-        <div className="history-text">
-          <h2>
+    <Content>
+      <HistoryArticle>
+        <ImgLeft src="../tajem_2.png" alt=""></ImgLeft>
+        <HistoryTextP>
+          <HistoryTextH2>
             {lang === ELanguages.ru ? "НАША ИСТОРИЯ" : "Istorie noastra"}{" "}
-          </h2>
+          </HistoryTextH2>
           <Outlet />
           {/* <p>
             Разрабатываем коммуникационные стратегии, которые позволяют бизнесу
@@ -29,8 +30,8 @@ export default function MainComponent() {
               Подробнее
             </a>
           </p> */}
-        </div>
-      </article>
+        </HistoryTextP>
+      </HistoryArticle>
 
       {/* <div className="form">
         <h2>НАПИШИТЕ НАМ</h2>
@@ -64,6 +65,6 @@ export default function MainComponent() {
           </form>
         </div>
       </div> */}
-    </main>
+    </Content>
   );
 }

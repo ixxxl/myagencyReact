@@ -1,24 +1,26 @@
+import { Button, Form, FormH2, Input } from "./StyleComponent";
+
 export const Form2Component = () => {
   return (
-    <div className="form">
-      <h2>НАПИШИТЕ НАМ</h2>
+    <Form>
+      <FormH2>НАПИШИТЕ НАМ</FormH2>
       <div className="form-block">
         <form method="GET">
-          <input
+          <Input
             type="text"
             className="imput_txt"
             name="subject"
             placeholder="Тема"
           />
-          <input
+          <Input
             type="email"
             className="imput_txt"
             name="email"
             placeholder="Email"
           />
-          <button className="button">отправить</button>
+          <Button>отправить</Button>
         </form>
       </div>
-    </div>
+    </Form>
   );
 };
