@@ -168,16 +168,3 @@ export const LangButtons = styled.div`
   width: 750px;
   padding-left: 505px;
 `;
-
-
-//   .textarea__text {
-//     width: 100%;
-//     border: 1px solid #e5e5e5;
-//     font-size: 14px;
-//     color: #413d4b;
-//     outline: none;
-//     margin-bottom: 20px;
-//     padding: 25px 20px;
-//     height: 150px;
-//   }
-
